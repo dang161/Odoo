@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="save_form_view">
+            <field name="name">intern.form</field>
+            <field name="model">intern.intern</field>
+            <field name="arch" type="xml">
+                <form string="save Form">
+                    <style>
+                        .openerp .test{
+                        width: 1000px;
+                        }
+
+                        td{
+                        padding-left: 10px;
+                        height :30px
+                        }
+
+                        .o_form_view .o_group.o_inner_group > tbody > tr > td {
+                        vertical-align: middle;
+                        }
+
+                        .o_form_view .o_form_field {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        }
+
+                        td.columnDivider {
+                        border-right: 1px solid #DEDEDE;
+                        text-align: right;
+
+                        }
+                        tr.rowDivider{
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        div.column{
+                        }
+
+
+                        .invoices [data-id="name"]{width: 1000px;}
+
+                        .class_education [data-id="month_start"]{width: 1cm;}
+                        .class_education [data-id="year_start"]{width: 2.8cm;}
+                        .class_education [data-id="month_end"]{width: 1cm;}
+                        .class_education [data-id="year_end"]{width: 2.8cm;}
+                        .class_education [data-id="certificate"]{width: 3cm;}
+                        .class_education [data-id="graduated"]{width: 2.8cm;}
+                        .class_education [data-id="school_type"]{width: 3cm;}
+                        .class_education [data-field="company"]{width: 5cm;}
+
+
+                        .table_divider {border-collapse: collapse;}
+                        .table_divider td{ border-bottom: 1px solid #DEDEDE; }
+
+                        td.noDivider {
+                        border-bottom: 0px solid #DEDEDE;
+                        }
+
+                        .mytable > tbody > tr > td {
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        .class_promotion [data-id="day"]{width: 1cm;}
+                        .class_promotion [data-id="month"]{width: 1cm;}
+                        .class_promotion [data-id="year"]{width: 2cm;}
+
+                        .o_form_view .o_form_field .o_form_input_dropdown{
+                        display:inline-block;
+                        width:80%
+                        }
+
+                        .btn_toggle{
+                        color: white;
+                        background-color: #b71c14;
+                        border-color: #b71c14;
+                        }
+
+                        .targets {width: 400px;}
+
+
+                        .class_education [data-id="company"]{width: 2cm;}
+
+                        .o_list_view [data-id="color_notice"]{width: 1cm;}
+
+                    </style>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <table class="col-12">
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="custom_id"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="custom_id" readonly="1"/>
+                                            </div>
+                                        </td>
+                                        <td class="columnDivider">
+                                            <label for="name"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="name" readonly="1"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <br/>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="cmnd_or_tcc"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="cmnd_or_tcc" readonly="1"/>
+                                            </div>
+                                        </td>
+                                        <td class="columnDivider">
+                                            <label for="date_of_birth"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="date_of_birth" readonly="1"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <br/>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="province"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="province" readonly="1"/>
+                                            </div>
+                                        </td>
+                                        <td class="columnDivider">
+                                            <label for="room_recruitment"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="room_recruitment" readonly="1"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <br/>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="recruitment_employee"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="recruitment_employee" readonly="1"/>
+                                            </div>
+                                        </td>
+                                        <td class="columnDivider">
+                                            <label for="recruitment_r_employee"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="recruitment_r_employee" readonly="1"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <br/>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="have_form"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="have_form" readonly="1"/>
+                                            </div>
+                                        </td>
+                                        <td class="columnDivider">
+                                            <label for="have_iq"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="have_iq" readonly="1"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <br/>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="have_health"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="have_health" readonly="1"/>
+                                            </div>
+                                        </td>
+                                        <td class="columnDivider">
+                                            <label for="have_deposit"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="have_deposit"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="save_tree_view">
+            <field name="name">intern.tree</field>
+            <field name="model">intern.intern</field>
+            <field name="arch" type="xml">
+                <tree string="save Tree">
+                    <field name="name"/>
+                    <field name="custom_id"/>
+                    <field name="cmnd_or_tcc"/>
+                    <field name="date_of_birth"/>
+                    <field name="province"/>
+                    <field name="room_recruitment"/>
+                    <field name="recruitment_employee"/>
+                    <field name="recruitment_r_employee"/>
+                    <field name="have_form"/>
+                    <field name="have_iq"/>
+                    <field name="have_health"/>
+                    <field name="have_deposit"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="save_list_action">
+            <field name="name">Danh sách đặt cọc</field>
+            <field name="res_model">intern.intern</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('save_tree_view')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('save_form_view')})]"/>
+        </record>
+        <menuitem id="main_intern_menu" name="Kế toán"
+                  web_icon="thuchi,static/description/icon.png"/>
+        <menuitem id="save_menu" name="Danh sách đặt cọc" parent="main_intern_menu"
+                  action="save_list_action"/>
+    </data>
+</odoo>

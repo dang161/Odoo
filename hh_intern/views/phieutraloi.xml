@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record id="view_phieutraloi_form" model="ir.ui.view">
+            <field name="name">Phiếu trả lời</field>
+            <field name="model">intern.phieutraloi</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="total_intern_women"/>
+                        <field name="total_intern_men"/>
+                        <field name="total_intern"/>
+                    </group>
+                    <notebook>
+                        <page string="Danh sách thực tập sinh">
+                            <field name="interns" string="Danh sách thực tập sinh" mode="tree"
+                                    domain="[('pass_exam','=',True),('cancel_pass','=',False)]" widget="many2many"
+                                   options="{'no_create': True,'no_open':True,'not_delete': True}">
+                                <tree edit="false" editable="bottom">
+                                    <field name="name" style="width:1"/>
+                                    <field name="gender"/>
+                                    <field name="cmnd_or_tcc"/>
+                                    <field name="date_of_birth"/>
+                                    <field name="province"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+<!--        <record model="ir.ui.view" id="xinp_tree_view">-->
+<!--            <field name="name">intern.phieutraloi tree</field>-->
+<!--            <field name="model">intern.phieutraloi</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree string="phieutraloi Tree">-->
+<!--                    <field name="name"/>-->
+<!--                    <field name="interns"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+        <record model="ir.actions.act_window" id="action_phieutraloi">
+            <field name="name">Danh sách phiếu trả lời</field>
+            <field name="res_model">intern.phieutraloi</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem
+                id="menu_list_phieutraloi"
+                name="Danh sách Phiếu trả lời"
+                action="action_phieutraloi" parent="main_hoso_menu"/>
+    </data>
+</odoo>

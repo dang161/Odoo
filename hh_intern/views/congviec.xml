@@ -1,0 +1,109 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="ttdt">
+            <field name="name">Trung tâm đào tạo</field>
+            <field name="res_model">trainingcenter</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm mới
+                </p>
+            </field>
+        </record>
+
+        <record id="view_training_center_form" model="ir.ui.view">
+            <field name="name">Trung tâm đào tạo</field>
+            <field name="model">trainingcenter</field>
+            <field name="arch" type="xml">
+                <form string="Chi tiết">
+                    <div class="container">
+                        <div class="row">
+                            <table class="col-12">
+                                <tr>
+                                    <td width="40%%" class="columnDivider">
+                                        <label for="name_jp"/>
+                                    </td>
+                                    <td width="60%">
+                                        <div>
+                                            <field name="name_jp"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="columnDivider">
+                                        <label for="address_en"/>
+                                    </td>
+                                    <td >
+                                        <div>
+                                            <field name="address_en"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="columnDivider">
+                                        <label for="date_create"/>
+                                    </td>
+                                    <td >
+                                        <div>
+                                            <field name="day_create" style="width: 45px; display: inline-block"
+                                                   placeholder="Ngày" widget="mask" data-inputmask-mask="99"
+                                                   class="oe_edit_only"/>
+                                            <field name="month_create" style="width: 70px; display: inline-block"
+                                                   placeholder="Tháng" class="oe_edit_only"/>
+                                            <field name="year_create" style="width:50px" placeholder="Năm"
+                                                   class="oe_edit_only" widget="mask" data-inputmask-mask="9999"/>
+                                            <field name="date_create" class="oe_read_only"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="columnDivider">
+                                        <label for="phone_number"/>
+                                    </td>
+                                    <td >
+                                        <div>
+                                            <field name="phone_number"/>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="columnDivider">
+                                        <label for="responsive_person"/>
+                                    </td>
+                                    <td >
+                                        <div>
+                                            <field name="responsive_person"/>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="columnDivider">
+                                        <label for="number_of_employee"/>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <field name="number_of_employee"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="columnDivider">
+                                        <label for="mission"/>
+                                    </td>
+                                    <td >
+                                        <div>
+                                            <field name="mission"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="overtime_report_wizard_view_action" model="ir.actions.act_window">
+            <field name="name">Báo cáo làm thêm</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">download.file</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <record id="overtime_report_wizard_view_form" model="ir.ui.view">
+            <field name="name">Báo cáo làm thêm</field>
+            <field name="model">download.file</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <group>
+                        <group>
+                            <p style="color:#f43a07">Lưu ý:Click vào đường link để tải xuống
+                            </p>
+
+                            <field name="link" widget="url" readonly="True"/>
+                        </group>
+                    </group>
+                </form>
+<!--                <footer></footer>-->
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "hh_intern",
+    'depends': ['base', 'resource', 'hr'],
+
+    'data': [
+        # 'security/ir.model.access.csv',
+        'views/styles.xml',
+        'views/wizard.xml',
+        'views/congtyPC.xml',
+        'views/congviec.xml',
+        'views/department.xml',
+        'views/dulieuchung.xml',
+        'views/dulieuchung2.xml',
+        'views/interndn.xml',
+        'views/internks.xml',
+        'views/invoiceks.xml',
+        'views/invoicedn.xml',
+        'views/invoicehs.xml',
+        'views/nghiepdoan.xml',
+        'views/nhanvien.xml',
+        'views/phapnhan.xml',
+        'views/donhang.xml',
+        'views/thuctapsinh.xml',
+        'views/xinghiep.xml',
+        'views/internclonehs.xml',
+        'views/view_doc_generate_clone.xml',
+        'views/phieutraloi.xml',
+        'views/download.xml',
+        # 'report/reprot.xml',
+    ],
+}

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--phan quan he với TTS-->
+        <record id="relation_list_action" model="ir.actions.act_window">
+            <field name="name">Quan hệ với TTS</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">relation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm mới
+                </p>
+            </field>
+        </record>
+
+        <record id="relation_tree_view" model="ir.ui.view">
+            <field name="name">relation.tree</field>
+            <field name="model">relation</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="relation"/>
+                    <field name="relation_jp"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="relation_form_view" model="ir.ui.view">
+            <field name="name">relation.form</field>
+            <field name="model">relation</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <style>
+                        .openerp .test{
+                        width: 1000px;
+                        }
+
+                        td{
+                        padding-left: 10px;
+                        height :30px
+                        }
+
+                        .o_form_view .o_group.o_inner_group > tbody > tr > td {
+                        vertical-align: middle;
+                        }
+
+                        .o_form_view .o_form_field {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        }
+
+                        td.columnDivider {
+                        border-right: 1px solid #DEDEDE;
+                        text-align: right;
+
+                        }
+                        tr.rowDivider{
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        div.column{
+                        }
+
+
+                        .invoices [data-id="name"]{width: 1000px;}
+
+                        .class_education [data-id="month_start"]{width: 1cm;}
+                        .class_education [data-id="year_start"]{width: 2.8cm;}
+                        .class_education [data-id="month_end"]{width: 1cm;}
+                        .class_education [data-id="year_end"]{width: 2.8cm;}
+                        .class_education [data-id="certificate"]{width: 3cm;}
+                        .class_education [data-id="graduated"]{width: 2.8cm;}
+                        .class_education [data-id="school_type"]{width: 3cm;}
+                        .class_education [data-field="company"]{width: 5cm;}
+
+
+                        .table_divider {border-collapse: collapse;}
+                        .table_divider td{ border-bottom: 1px solid #DEDEDE; }
+
+                        td.noDivider {
+                        border-bottom: 0px solid #DEDEDE;
+                        }
+
+                        .mytable > tbody > tr > td {
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        .class_promotion [data-id="day"]{width: 1cm;}
+                        .class_promotion [data-id="month"]{width: 1cm;}
+                        .class_promotion [data-id="year"]{width: 2cm;}
+
+                        .o_form_view .o_form_field .o_form_input_dropdown{
+                        display:inline-block;
+                        width:80%
+                        }
+
+                        .btn_toggle{
+                        color: white;
+                        background-color: #b71c14;
+                        border-color: #b71c14;
+                        }
+
+                        .targets {width: 400px;}
+
+
+                        .class_education [data-id="company"]{width: 2cm;}
+
+                        .o_list_view [data-id="color_notice"]{width: 1cm;}
+
+                    </style>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                                <table>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="relation"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="relation"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="relation_jp"/>
+                                        </td>
+                                        <td class="column">
+                                            <div>
+                                                <field name="relation_jp"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-lg-3"></div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--        phan cua nganh nghe    -->
+
+        <record id="job_list_action" model="ir.actions.act_window">
+            <field name="name">Ngành nghề</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">intern.job</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm mới
+                </p>
+            </field>
+        </record>
+
+        <record id="job_tree_view" model="ir.ui.view">
+            <field name="name">job.tree</field>
+            <field name="model">intern.job</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="name_en"/>
+                    <field name="name_jp"/>
+                </tree>
+            </field>
+        </record>
+        <record id="job_form_view" model="ir.ui.view">
+            <field name="name">job.form</field>
+            <field name="model">intern.job</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <style>
+                        .openerp .test{
+                        width: 1000px;
+                        }
+
+                        td{
+                        padding-left: 10px;
+                        height :30px
+                        }
+
+                        .o_form_view .o_group.o_inner_group > tbody > tr > td {
+                        vertical-align: middle;
+                        }
+
+                        .o_form_view .o_form_field {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        }
+
+                        td.columnDivider {
+                        border-right: 1px solid #DEDEDE;
+                        text-align: right;
+
+                        }
+                        tr.rowDivider{
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        div.column{
+                        }
+
+
+                        .invoices [data-id="name"]{width: 1000px;}
+
+                        .class_education [data-id="month_start"]{width: 1cm;}
+                        .class_education [data-id="year_start"]{width: 2.8cm;}
+                        .class_education [data-id="month_end"]{width: 1cm;}
+                        .class_education [data-id="year_end"]{width: 2.8cm;}
+                        .class_education [data-id="certificate"]{width: 3cm;}
+                        .class_education [data-id="graduated"]{width: 2.8cm;}
+                        .class_education [data-id="school_type"]{width: 3cm;}
+                        .class_education [data-field="company"]{width: 5cm;}
+
+
+                        .table_divider {border-collapse: collapse;}
+                        .table_divider td{ border-bottom: 1px solid #DEDEDE; }
+
+                        td.noDivider {
+                        border-bottom: 0px solid #DEDEDE;
+                        }
+
+                        .mytable > tbody > tr > td {
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        .class_promotion [data-id="day"]{width: 1cm;}
+                        .class_promotion [data-id="month"]{width: 1cm;}
+                        .class_promotion [data-id="year"]{width: 2cm;}
+
+                        .o_form_view .o_form_field .o_form_input_dropdown{
+                        display:inline-block;
+                        width:80%
+                        }
+
+                        .btn_toggle{
+                        color: white;
+                        background-color: #b71c14;
+                        border-color: #b71c14;
+                        }
+
+                        .targets {width: 400px;}
+
+
+                        .class_education [data-id="company"]{width: 2cm;}
+
+                        .o_list_view [data-id="color_notice"]{width: 1cm;}
+
+                    </style>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                                <table>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="name"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="name"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="name_en"/>
+                                        </td>
+                                        <td class="column">
+                                            <div>
+                                                <field name="name_en"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="name_jp"/>
+                                        </td>
+                                        <td class="column">
+                                            <div>
+                                                <field name="name_jp"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-lg-3"></div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--        pphan tai lieu mau o day    -->
+
+        <record id="document_list_action" model="ir.actions.act_window">
+            <field name="name">Document</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">intern.document</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm mới
+                </p>
+            </field>
+        </record>
+
+        <record id="document_tree_view" model="ir.ui.view">
+            <field name="name">document.tree</field>
+            <field name="model">intern.document</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="document_form_view" model="ir.ui.view">
+            <field name="name">document.form</field>
+            <field name="model">intern.document</field>
+            <field name="arch" type="xml">
+                <form string="">
+                      <style>
+                        .openerp .test{
+                        width: 1000px;
+                        }
+
+                        td{
+                        padding-left: 10px;
+                        height :30px
+                        }
+
+                        .o_form_view .o_group.o_inner_group > tbody > tr > td {
+                        vertical-align: middle;
+                        }
+
+                        .o_form_view .o_form_field {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        }
+
+                        td.columnDivider {
+                        border-right: 1px solid #DEDEDE;
+                        text-align: right;
+
+                        }
+                        tr.rowDivider{
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        div.column{
+                        }
+
+
+                        .invoices [data-id="name"]{width: 1000px;}
+
+                        .class_education [data-id="month_start"]{width: 1cm;}
+                        .class_education [data-id="year_start"]{width: 2.8cm;}
+                        .class_education [data-id="month_end"]{width: 1cm;}
+                        .class_education [data-id="year_end"]{width: 2.8cm;}
+                        .class_education [data-id="certificate"]{width: 3cm;}
+                        .class_education [data-id="graduated"]{width: 2.8cm;}
+                        .class_education [data-id="school_type"]{width: 3cm;}
+                        .class_education [data-field="company"]{width: 5cm;}
+
+
+                        .table_divider {border-collapse: collapse;}
+                        .table_divider td{ border-bottom: 1px solid #DEDEDE; }
+
+                        td.noDivider {
+                        border-bottom: 0px solid #DEDEDE;
+                        }
+
+                        .mytable > tbody > tr > td {
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        .class_promotion [data-id="day"]{width: 1cm;}
+                        .class_promotion [data-id="month"]{width: 1cm;}
+                        .class_promotion [data-id="year"]{width: 2cm;}
+
+                        .o_form_view .o_form_field .o_form_input_dropdown{
+                        display:inline-block;
+                        width:80%
+                        }
+
+                        .btn_toggle{
+                        color: white;
+                        background-color: #b71c14;
+                        border-color: #b71c14;
+                        }
+
+                        .targets {width: 400px;}
+
+
+                        .class_education [data-id="company"]{width: 2cm;}
+
+                        .o_list_view [data-id="color_notice"]{width: 1cm;}
+
+                    </style>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                                <table>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="name"/>
+                                        </td>
+                                        <td>
+                                            <div class="column">
+                                                <field name="name"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="attachment"/>
+                                        </td>
+                                        <td class="column">
+                                            <div>
+                                                <field name="attachment" filename="note" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="columnDivider">
+                                            <label for="note"/>
+                                        </td>
+                                        <td class="column">
+                                            <div>
+                                                <field name="note"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-lg-3"></div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="relation_id_menu" name="Quan hệ với TTS" parent="parent_menu_id" action="relation_list_action"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="job_id_menu" name="Ngành nghề" parent="parent_menu_id" action="job_list_action"/>
+
+        <menuitem id="document_id_menu" name="Tài liệu mẫu" parent="parent_menu_id" action="document_list_action"/>
+
+    </data>
+</odoo>

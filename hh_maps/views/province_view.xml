@@ -1,0 +1,33 @@
+<odoo>
+    <record model="ir.ui.view" id="province_form1_view">
+        <field name="name">Tỉnh/TP</field>
+        <field name="model">province</field>
+        <field name="inherit_id" ref="hh_intern.province_form_view"/>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name_in_jp"/>
+                    <field name="id_map"/>
+                    <field name="x_point"/>
+                    <field name="y_point"/>
+                    <field name="column"/>
+                    <field name="sort"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="invoice_form_my" model="ir.ui.view">
+        <field name="name">Extends Form</field>
+        <field name="model">intern.invoice</field>
+        <!--        <field name="inherit_id" ref="hh_intern.view_doc_generate_clone"/>-->
+        <field name="arch" type="xml">
+            <form>
+                <button name="create_doc_new_women" position="after">
+                    <button name="print_maps" string="Tạo bản đồ" type="object"/>
+                </button>
+            </form>
+        </field>
+    </record>
+</odoo>

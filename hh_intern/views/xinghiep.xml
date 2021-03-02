@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="xinghiep_list_action">
+            <field name="name">Danh sách xí nghiệp</field>
+            <field name="res_model">xinghiep.xinghiep</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm mới
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="xinghiep_form_view">
+            <field name="name">xinghiep.form</field>
+            <field name="model">xinghiep.xinghiep</field>
+            <field name="arch" type="xml">
+                <form string="Chi tiết">
+                    <style>
+                        .openerp .test{
+                        width: 1000px;
+                        }
+
+                        td{
+                        padding-left: 10px;
+                        height :30px
+                        }
+
+                        .o_form_view .o_group.o_inner_group > tbody > tr > td {
+                        vertical-align: middle;
+                        }
+
+                        .o_form_view .o_form_field {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        }
+
+                        td.columnDivider {
+                        border-right: 1px solid #DEDEDE;
+                        text-align: right;
+
+                        }
+                        tr.rowDivider{
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        div.column{
+                        }
+
+
+                        .invoices [data-id="name"]{width: 1000px;}
+
+                        .class_education [data-id="month_start"]{width: 1cm;}
+                        .class_education [data-id="year_start"]{width: 2.8cm;}
+                        .class_education [data-id="month_end"]{width: 1cm;}
+                        .class_education [data-id="year_end"]{width: 2.8cm;}
+                        .class_education [data-id="certificate"]{width: 3cm;}
+                        .class_education [data-id="graduated"]{width: 2.8cm;}
+                        .class_education [data-id="school_type"]{width: 3cm;}
+                        .class_education [data-field="company"]{width: 5cm;}
+
+
+                        .table_divider {border-collapse: collapse;}
+                        .table_divider td{ border-bottom: 1px solid #DEDEDE; }
+
+                        td.noDivider {
+                        border-bottom: 0px solid #DEDEDE;
+                        }
+
+                        .mytable > tbody > tr > td {
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        .class_promotion [data-id="day"]{width: 1cm;}
+                        .class_promotion [data-id="month"]{width: 1cm;}
+                        .class_promotion [data-id="year"]{width: 2cm;}
+
+                        .o_form_view .o_form_field .o_form_input_dropdown{
+                        display:inline-block;
+                        width:80%
+                        }
+
+                        .btn_toggle{
+                        color: white;
+                        background-color: #b71c14;
+                        border-color: #b71c14;
+                        }
+
+                        .targets {width: 400px;}
+
+
+                        .class_education [data-id="company"]{width: 2cm;}
+
+                        .o_list_view [data-id="color_notice"]{width: 1cm;}
+
+                    </style>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <table class="col-12">
+                                    <tbody>
+                                        <tr>
+                                            <td width="20%" class="columnDivider">
+                                                <label for="name_jp_enterprise"/>
+                                            </td>
+                                            <td width="30%">
+                                                <div class="column">
+                                                    <field name="name_jp_enterprise"/>
+                                                </div>
+                                            </td>
+                                            <td width="20%" class="columnDivider">
+                                                <label for="name_romaji_enterprise"/>
+                                            </td>
+                                            <td width="30%">
+                                                <div class="column">
+                                                    <field name="name_romaji_enterprise"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <br/>
+                                        <tr>
+                                            <td class="columnDivider">
+                                                <label for="address_jp_enterprise"/>
+                                            </td>
+                                            <td>
+                                                <div class="column">
+                                                    <field name="address_jp_enterprise"/>
+                                                </div>
+                                            </td>
+                                            <td class="columnDivider">
+                                                <label for="address_romoji_enterprise"/>
+                                            </td>
+                                            <td>
+                                                <div class="column">
+                                                    <field name="address_romoji_enterprise"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <br/>
+                                        <tr>
+                                            <td class="columnDivider">
+                                                <label for="phone_number_enterprise"/>
+                                            </td>
+                                            <td>
+                                                <div class="column">
+                                                    <field name="phone_number_enterprise" style="width:100px"/>
+                                                </div>
+                                            </td>
+
+                                            <td class="columnDivider">
+                                                <label for="fax_number_enterprise"/>
+                                            </td>
+                                            <td>
+                                                <div class="column">
+                                                    <field name="fax_number_enterprise" style="width:100px"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <br/>
+                                        <tr>
+                                            <td class="columnDivider">
+                                                <label for="name_of_responsive_jp_enterprise"/>
+                                            </td>
+                                            <td>
+                                                <div class="column">
+                                                    <field name="name_of_responsive_jp_enterprise"/>
+                                                </div>
+                                            </td>
+
+                                            <td class="columnDivider">
+                                                <label for="name_of_responsive_en_enterprise"/>
+                                            </td>
+                                            <td>
+                                                <div class="column">
+                                                    <field name="name_of_responsive_en_enterprise"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="xinghiep_tree_view">
+            <field name="name">xinghiep.tree</field>
+            <field name="model">xinghiep.xinghiep</field>
+            <field name="arch" type="xml">
+                <tree string="xinghiep Tree">
+                    <field name="name_romaji_enterprise"/>
+                    <field name="name_jp_enterprise"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem id="xinghiep_menu" name="Danh sách xí nghiệp" parent="main_hoso_menu"
+                  action="xinghiep_list_action"/>
+    </data>
+</odoo>

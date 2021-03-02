@@ -1,0 +1,67 @@
+<odoo>
+    <record id="dialog_printdoc_invoice" model="ir.ui.view">
+        <field name="name">download.form</field>
+        <field name="model">report.doccument</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="enterprise_ids" invisible="1"/>
+                    <field
+                            name="enterprise"
+                            domain='[("id","=",enterprise_ids)]'
+                            options="{'no_create':True}"/>
+                    <field name="document"/>
+                </group>
+                <footer>
+                    <button name="confirm_request"
+                            string="OK" type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel"
+                            class="btn-default"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_dialog_select_enterprise_wizard" model="ir.actions.act_window">
+        <field name="name">Lựa chọn Xí nghiệp và tài liệu muốn in</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">report.doccument</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="dialog_printdoc_invoice"/>
+        <field name="target">new</field>
+    </record>
+    <record id="dialog_cancel_invoice" model="ir.ui.view">
+        <field name="name">invoice.cancel.wizard</field>
+        <field name="model">invoice.cancel.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Hi i am wizard">
+                <sheet>
+                    <group>
+                        <field name="reason" style="width:300px" required="1"/>
+                    </group>
+                </sheet>
+
+                <footer>
+                    <button name="confirm_request"
+                            string="OK" type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel"
+                            class="btn-default"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_dialog_pause_invoice_wizard" model="ir.actions.act_window">
+        <field name="name">Confirm action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">invoice.cancel.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="dialog_cancel_invoice"/>
+        <field name="context">{'action': context.get('action', False)}</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="hoso_list_action">
+            <field name="name">Danh sách công ty PC2</field>
+            <field name="res_model">hoso.hoso</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm mới
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hoso_form_view">
+            <field name="name">hoso.form</field>
+            <field name="model">hoso.hoso</field>
+            <field name="arch" type="xml">
+                <form string="Chi tiết">
+                    <style>
+                        .openerp .test{
+                        width: 1000px;
+                        }
+
+                        td{
+                        padding-left: 10px;
+                        height :30px
+                        }
+
+                        .o_form_view .o_group.o_inner_group > tbody > tr > td {
+                        vertical-align: middle;
+                        }
+
+                        .o_form_view .o_form_field {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        }
+
+                        td.columnDivider {
+                        border-right: 1px solid #DEDEDE;
+                        text-align: right;
+
+                        }
+                        tr.rowDivider{
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        div.column{
+                        }
+
+
+                        .invoices [data-id="name"]{width: 1000px;}
+
+                        .class_education [data-id="month_start"]{width: 1cm;}
+                        .class_education [data-id="year_start"]{width: 2.8cm;}
+                        .class_education [data-id="month_end"]{width: 1cm;}
+                        .class_education [data-id="year_end"]{width: 2.8cm;}
+                        .class_education [data-id="certificate"]{width: 3cm;}
+                        .class_education [data-id="graduated"]{width: 2.8cm;}
+                        .class_education [data-id="school_type"]{width: 3cm;}
+                        .class_education [data-field="company"]{width: 5cm;}
+
+
+                        .table_divider {border-collapse: collapse;}
+                        .table_divider td{ border-bottom: 1px solid #DEDEDE; }
+
+                        td.noDivider {
+                        border-bottom: 0px solid #DEDEDE;
+                        }
+
+                        .mytable > tbody > tr > td {
+                        border-bottom: 1px solid #DEDEDE;
+                        }
+
+                        .class_promotion [data-id="day"]{width: 1cm;}
+                        .class_promotion [data-id="month"]{width: 1cm;}
+                        .class_promotion [data-id="year"]{width: 2cm;}
+
+                        .o_form_view .o_form_field .o_form_input_dropdown{
+                        display:inline-block;
+                        width:80%
+                        }
+
+                        .btn_toggle{
+                        color: white;
+                        background-color: #b71c14;
+                        border-color: #b71c14;
+                        }
+
+                        .targets {width: 400px;}
+
+
+                        .class_education [data-id="company"]{width: 2cm;}
+
+                        .o_list_view [data-id="color_notice"]{width: 1cm;}
+
+                    </style>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+                                <table class="o_group">
+                                    <tr>
+                                        <td colspan="1" width="30%" class="columnDivider">
+                                            <label for="name"/>
+                                        </td>
+                                        <td colspan="1" width="70%">
+                                            <div class="column">
+                                                <field name="name"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="columnDivider">
+                                            <label for="name_vn"/>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="column">
+                                                <field name="name_vn"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="columnDivider">
+                                            <label for="address"/>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="column">
+                                                <field name="address"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="columnDivider">
+                                            <label for="director"/>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="column">
+                                                <field name="director"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="columnDivider">
+                                            <label for="position_person_sign"/>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="column">
+                                                <field name="position_person_sign" style="width:100px"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="columnDivider">
+                                            <label for="phone_number"/>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="column">
+                                                <field name="phone_number" style="width:100px"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="columnDivider">
+                                            <label for="fax_number"/>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="column">
+                                                <field name="fax_number"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" class="columnDivider">
+                                            <label for="date_create"/>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="column">
+                                                <field name="day_create" style="width: 40px; display: inline-block"
+                                                       placeholder="Ngày" widget="mask" data-inputmask-mask="99"
+                                                       class="oe_edit_only"/>
+                                                <field name="month_create" style="width: 70px; display: inline-block"
+                                                       placeholder="Tháng" class="oe_edit_only"/>
+                                                <field name="year_create" style="width:50px" placeholder="Năm"
+                                                       class="oe_edit_only" widget="mask" data-inputmask-mask="9999"/>
+                                                <field name="date_create" class="oe_read_only"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="hoso_tree_view">
+            <field name="name">hoso.tree</field>
+            <field name="model">hoso.hoso</field>
+            <field name="arch" type="xml">
+                <tree string="hoso Tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem id="main_hoso_menu" name="Hồ sơ" action="hoso_list_action"/>
+        <menuitem id="hoso_menu" name="Danh Sách công ty PC2 " parent="main_hoso_menu"
+                  action="hoso_list_action"/>
+
+    </data>
+</odoo>

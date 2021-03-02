@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+        id="invoice_form_view_xlx"
+        model="intern.invoice"
+        string="DS tiến cử"
+        report_type="xlsx"
+        name=""
+        file=""
+        attachment_use="False"
+        menu="False"
+    />
+    </data>
+</odoo>

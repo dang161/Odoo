@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="module_name assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/hh_intern/static/js/list_view_editable.js"></script>
+                <script type="text/javascript" src="/hh_intern/static/js/list_view.js"></script>
+                <script type="text/javascript" src="/hh_intern/static/js/form_view_custom.js"></script>
+                <script type="text/javascript" src="/hh_intern/static/js/widget_tree_intern.js"></script>
+                <script type="text/javascript" src="/hh_intern/static/js/widget_custom.js"></script>
+                <script type="text/javascript" src="/hh_intern/static/js/grouped_list_view.js"></script>
+                <script type="text/javascript" src="/hh_intern/static/js/core.js"></script>
+
+                <!--<script type="text/javascript" src="/hh_intern/static/src/js/jquery.ba-floatingscrollbar.js"></script>-->
+
+                <link rel="stylesheet" href="/hh_intern/static/css/intern.css"/>
+                <link rel="stylesheet" href="/hh_intern/static/css/scroll-fix.css"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

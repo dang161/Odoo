@@ -1,0 +1,134 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="ttdt">
+            <field name="name">Đơn hàng</field>
+            <field name="res_model">intern.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm mới
+                </p>
+            </field>
+        </record>
+
+        <record id="view_doc_generate_clone" model="ir.ui.view">
+            <field name="name">Tạo đơn hàng</field>
+            <field name="model">intern.invoice</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="create_doc_new" string="Tạo Đơn hàng" type="object" class="oe_highlight"/>
+                        <button name="create_list_exam_excel" string="Tạo danh sách TTS(Excel)" type="object"
+                                class="oe_highlight"/>
+                        <button name="create_doc_new_man" string="Tạo đơn hàng Nam" type="object" class="oe_highlight"/>
+                        <button name="create_doc_new_women" string="Tạo đơn hàng Nữ" type="object"
+                                class="oe_highlight"/>
+                        <field name="status" invisible="1"/>
+                    </header>
+                    <table class="o_group">
+                        <tbody>
+                            <tr>
+                                <td colspan="1" width="150px" class="columnDivider">
+                                    <label for="name"/>
+                                </td>
+                                <td colspan="1" width="250px">
+                                    <div class="column">
+                                        <field name="name"/>
+                                    </div>
+                                </td>
+                                <td colspan="1" width="200px" class="columnDivider">
+                                    <label for="room_pttt"/>
+                                </td>
+                                <td colspan="1" width="100px">
+                                    <div class="column">
+                                        <field name="room_pttt" widget="selection" domain="[('room_type', '=', '1')]"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" width="150px" class="columnDivider">
+                                    <label for="enterprise_doc" required="True"/>
+                                </td>
+                                <td colspan="1" width="250px">
+                                    <div class="column">
+                                        <field name="enterprise_doc"/>
+                                    </div>
+                                </td>
+                                <td colspan="1" width="200px" class="columnDivider">
+                                    <label for="place_to_work"/>
+                                </td>
+                                <td colspan="1" width="250px">
+                                    <div class="column">
+                                        <field name="place_to_work"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" width="150px" class="columnDivider">
+                                    <label for="guild"/>
+                                </td>
+                                <td colspan="1" width="250px">
+                                    <div class="column">
+                                        <field name="guild" required="True"/>
+                                    </div>
+                                </td>
+                                <td colspan="1" width="200px" class="columnDivider">
+                                    <label for="legal_name"/>
+                                </td>
+                                <td colspan="1" width="100px">
+                                    <div class="column">
+                                        <field name="legal_name"/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <notebook>
+                        <page string="Danh sách thi tuyển">
+                            <field name="interns_exam_doc" string="Danh sách thực tập sinh" mode="tree"
+                                   context="{'form_view_ref':'hh_intern.view_intern_form_clone'}" limit="5000">
+                                <tree string="Chi tiết thực tập sinh" create="false" default_order="sequence_exam"
+                                      delete="false" limit="5000">
+                                    <field name="name_without_signal"/>
+                                    <field name="name"/>
+                                    <field name="identity"/>
+                                    <field name="identity_2"/>
+                                    <field name="date_of_birth"/>
+                                    <field name="address"/>
+                                    <field name="province"/>
+                                    <field name="avatar" widget="image"/>
+                                    <field name="height"/>
+                                    <field name="sequence_exam" widget="handle"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+        <record id="invoice_form_my" model="ir.ui.view">
+
+            <field name="name">Extends Form</field>
+
+            <field name="model">intern.invoice</field>
+
+            <field name="inherit_id" ref="hh_intern.view_doc_generate_clone"/>
+
+            <field name="arch" type="xml">
+
+                <button name="create_doc_new_women" position="after">
+                    <button name="print_maps" string="Tạo bản đồ" type="object"/>
+                    <button string="Gửi lại TB trúng tuyển" type="object" name="send_pass_report_again"
+                            attrs="{'invisible': [('status', '!=', 2)]}"/>
+                    <button string="Tải TB trúng tuyển" type="object" name="download_pass_report"
+                            attrs="{'invisible': [('status', '!=', 2)]}"/>
+                    <button string="Tải DS TTS thi tuyển" type="object" name="download_exam_report"
+                            attrs="{'invisible': [('status', '!=', 1)]}"/>
+                </button>
+
+            </field>
+
+        </record>
+    </data>
+</odoo>

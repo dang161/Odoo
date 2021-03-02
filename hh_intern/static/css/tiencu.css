@@ -1,0 +1,101 @@
+
+
+.openerp .test{
+width: 1000px;
+}
+
+td{
+padding-left: 10px;
+height :30px
+}
+
+.o_form_view .o_group.o_inner_group > tbody > tr > td {
+vertical-align: middle;
+}
+
+.o_form_view .o_form_field {
+display: inline-block;
+margin-bottom: 0px;
+}
+
+td.columnDivider {
+border-right: 1px solid #DEDEDE;
+text-align: right;
+
+}
+tr.rowDivider{
+border-bottom: 1px solid #DEDEDE;
+}
+
+div.column{
+}
+
+.o_form_view .o_field_widget {
+width: 100%;
+}
+
+.oe_form_field_color .color_box {
+width: 100%;
+height: 25px;
+border: 1px solid white;
+}
+
+.o_form_view .o_form_statusbar > .o_statusbar_buttons {
+width: 700px;
+}
+
+.oe_form_field_color > .oe_form_char_content {
+visibility: hidden;
+}
+
+.o_form_view.o_form_nosheet .o_form_statusbar {
+margin-bottom: 0px;
+}
+.oe_form_field_color > .oe_form_char_content {
+visibility: hidden;
+}
+
+.invoices [data-id="name"]{width: 1000px;}
+
+.class_education [data-id="month_start"]{width: 1cm;}
+.class_education [data-id="year_start"]{width: 2.8cm;}
+.class_education [data-id="month_end"]{width: 1cm;}
+.class_education [data-id="year_end"]{width: 2.8cm;}
+.class_education [data-id="certificate"]{width: 3cm;}
+.class_education [data-id="graduated"]{width: 2.8cm;}
+.class_education [data-id="school_type"]{width: 3cm;}
+.class_education [data-field="company"]{width: 5cm;}
+
+
+.table_divider {border-collapse: collapse;}
+.table_divider td{ border-bottom: 1px solid #DEDEDE; }
+
+td.noDivider {
+border-bottom: 0px solid #DEDEDE;
+}
+
+.mytable > tbody > tr > td {
+border-bottom: 1px solid #DEDEDE;
+}
+
+.class_promotion [data-id="day"]{width: 1cm;}
+.class_promotion [data-id="month"]{width: 1cm;}
+.class_promotion [data-id="year"]{width: 2cm;}
+
+.o_form_view .o_form_field .o_form_input_dropdown{
+display:inline-block;
+width:80%
+}
+
+.btn_toggle{
+color: white;
+background-color: #b71c14;
+border-color: #b71c14;
+}
+
+.targets {width: 400px;}
+
+
+.class_education [data-id="company"]{width: 2cm;}
+
+.o_list_view [data-id="color_notice"]{width: 1cm;}
